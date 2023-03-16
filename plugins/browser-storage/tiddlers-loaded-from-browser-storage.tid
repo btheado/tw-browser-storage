@@ -10,9 +10,9 @@ caption: Tiddlers loaded from browser storage
 <th>System tiddlers</th><th>Other tiddlers</th>
 </tr>
 <tr>
-<td><<tree prefix: "$:/" filter: "[[$:/temp/BrowserStorage/Log]get[text]enlist-input[]]">></td><td>
+<td><<tree prefix: "$:/" filter: "[enlist{$:/temp/BrowserStorage/Log}]">></td><td>
 
-{{{[[$:/temp/BrowserStorage/Log]get[text]enlist-input[]!prefix[$:/]]}}}
+{{{[enlist{$:/temp/BrowserStorage/Log}!prefix[$:/]]}}}
 
 </td>
 </tr></table>

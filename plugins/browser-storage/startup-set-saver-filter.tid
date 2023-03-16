@@ -11,5 +11,5 @@ title: $:/plugins/btheado/BrowserStorage/startup/SetSaverFilter
   it anymore.
 -->
 <$list filter="$:/config/BrowserStorage/SaveFilter -[is[tiddler]]">
-<$action-setfield $tiddler="$:/config/BrowserStorage/SaveFilter" text={{{[[$:/plugins/btheado/BrowserStorage/SaveFilter]get[text]]}}}/>
+<$action-setfield $tiddler="$:/config/BrowserStorage/SaveFilter" text={{$:/plugins/btheado/BrowserStorage/SaveFilter}}/>
 </$list>
