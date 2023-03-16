@@ -12,8 +12,8 @@ Downloaded backups provide extra copies of the tiddler data stored in browser lo
 Here is a summary of the tiddlers in browser local storage:
 
 |!Loaded at startup|<$link to="$:/plugins/btheado/BrowserStorage/TiddlersLoadedFromBrowserStorage"><$text text={{{[enlist{$:/temp/BrowserStorage/Log}count[]]}}}/> tiddlers</$link>|
-|!Saved since startup|<$link to="$:/plugins/btheado/BrowserStorage/TiddlersChangedSinceStartup"><$text text={{{[haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}count[]]}}}/> tiddlers</$link>|
-|!Total (unique)|<$text text={{{[enlist{$:/temp/BrowserStorage/Log}] [haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}] :and[unique[]count[]]}}}/> tiddlers|
+|!Saved since startup|<$link to="$:/plugins/btheado/BrowserStorage/TiddlersChangedSinceStartup"><$text text={{{[haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}] -$:/config/BrowserStorage/Enabled :and[count[]]}}}/> tiddlers</$link>|
+|!Total (unique)|<$text text={{{[enlist{$:/temp/BrowserStorage/Log}] [haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}] -$:/config/BrowserStorage/Enabled :and[unique[]count[]]}}}/> tiddlers|
 
 The browser local storage tiddlers are not present in the source url: {{$:/info/url/full}}, but they will be saved whenever you download a backup copy {{$:/core/ui/Buttons/save-wiki}}.
 

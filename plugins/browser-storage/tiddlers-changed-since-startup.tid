@@ -10,7 +10,7 @@ caption: Tiddlers saved to browser storage since startup
 <th>System tiddlers</th><th>Other tiddlers</th>
 </tr>
 <tr>
-<td><<tree prefix: "$:/" filter: "[haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}]">></td><td>
+<td><<tree prefix: "$:/" filter: "[haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}] -$:/config/BrowserStorage/Enabled">></td><td>
 
 {{{[haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}!prefix[$:/]]}}}
 
