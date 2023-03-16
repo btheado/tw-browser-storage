@@ -1,0 +1,31 @@
+created: 20220727011104055
+modified: 20220731013334922
+tags: 
+title: $:/plugins/btheado/BrowserStorage/BackupInstructions
+
+Have you downloaded a backup file recently?
+
+Click this button {{$:/core/ui/Buttons/save-wiki}} to download a new backup copy of your wiki.
+
+Downloaded backups provide extra copies of the tiddler data stored in browser local storage. The backup is a single, self-contained html file and it also includes all the source code required to run this wiki.
+
+Here is a summary of the tiddlers in browser local storage:
+
+|!Loaded at startup|<$link to="$:/plugins/btheado/BrowserStorage/TiddlersLoadedFromBrowserStorage"><$text text={{{[[$:/temp/BrowserStorage/Log]get[text]enlist-input[]count[]]}}}/> tiddlers</$link>|
+|!Saved since startup|<$link to="$:/plugins/btheado/BrowserStorage/TiddlersChangedSinceStartup"><$text text={{{[haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}count[]]}}}/> tiddlers</$link>|
+|!Total (unique)|<$text text={{{[[$:/temp/BrowserStorage/Log]get[text]enlist-input[]] [haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}] :and[unique[]count[]]}}}/> tiddlers|
+
+The browser local storage tiddlers are not present in the source url: {{$:/info/url/full}}, but they will be saved whenever you download a backup copy {{$:/core/ui/Buttons/save-wiki}}.
+
+If you don't have access to update the wiki file at {{$:/info/url/full}}, then consider performing the following steps:
+
+# download a backup {{$:/core/ui/Buttons/save-wiki}}
+# copy the download to a documents or some other folder folder
+# load it into the browser via a file:/// url (i.e. double clicking the file in a file explorer should open it in the browser).
+
+If you do have access to update the wiki file at {{$:/info/url/full}}, then it is best to
+
+# Overwrite it periodically with the latest downloaded backup {{$:/core/ui/Buttons/save-wiki}}.
+# Upon reload any data already in the wiki file will be cleared from the browser storage.
+
+Beware of the privacy implications of browser local storage tiddlers and file:/// urls. The browser storage contents are shared across all file:/// urls. This means any html loaded from a file:/// url can read those browser storage tiddlers.

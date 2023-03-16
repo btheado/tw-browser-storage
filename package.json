@@ -1,0 +1,30 @@
+{
+  "name": "tw-browser-storage",
+  "version": "0.0.1",
+  "description": "tw5 plugin",
+  "dependencies": {
+    "tiddlywiki": "^5.2.5",
+    "tiddlywiki-prerelease": "github:Jermolene/TiddlyWiki5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "build": "node ./node_modules/tiddlywiki/tiddlywiki.js . --build index",
+    "build-prerelease": "node ./node_modules/tiddlywiki-prerelease/tiddlywiki.js . --output ./output/prerelease/ --build index",
+    "build-beta": "node ./node_modules/tiddlywiki/tiddlywiki.js . --build beta",
+    "update-tw": "npm install --save tiddlywiki-prerelease@github:Jermolene/TiddlyWiki5 && npm install --save tiddlywiki",
+    "dev": "npx nodemon -e tid,multids,js,info --watch plugins ./node_modules/tiddlywiki/tiddlywiki.js . --listen port=7111",
+    "dev-prerelease": "npx nodemon -e tid,multids,js,info --watch plugins ./node_modules/tiddlywiki-prerelease/tiddlywiki.js . --listen port=7111"
+  },
+  "author": "Brian Theado",
+  "license": "",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:btheado/tw-browser-storage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/btheado/tw-browser-storage/issues"
+  },
+  "homepage": "https://btheado.github.io/tw-browser-storage/"
+}

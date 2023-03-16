@@ -1,0 +1,13 @@
+caption: Storage
+created: 20230316194806701
+modified: 20230316195309773
+tags: $:/tags/MoreSideBar
+title: $:/plugins/btheado/BrowserStorage/TiddlerStorageCounts
+
+!! {{$:/plugins/btheado/BrowserStorage/TiddlersLoadedFromBrowserStorage!!caption}}
+{{$:/plugins/btheado/BrowserStorage/TiddlersLoadedFromBrowserStorage}}
+
+---
+
+!! {{$:/plugins/btheado/BrowserStorage/TiddlersChangedSinceStartup!!caption}}
+{{$:/plugins/btheado/BrowserStorage/TiddlersChangedSinceStartup}}

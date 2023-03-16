@@ -1,0 +1,15 @@
+created: 20220731143327842
+modified: 20220731164653068
+tags: $:/tags/StartupAction/Browser
+title: $:/plugins/btheado/BrowserStorage/startup/SetSaverFilter
+
+<!--
+  When two different plugins have the same tiddler, then plugin load order
+  dictates which will be used. Instead of relying on order, use a startup
+  action to copy the tiddler over top the default one. But once the shadow
+  tiddler exists (and possibly further modified by the user), do not overwrite
+  it anymore.
+-->
+<$list filter="$:/config/BrowserStorage/SaveFilter -[is[tiddler]]">
+<$action-setfield $tiddler="$:/config/BrowserStorage/SaveFilter" text={{{[[$:/plugins/btheado/BrowserStorage/SaveFilter]get[text]]}}}/>
+</$list>
