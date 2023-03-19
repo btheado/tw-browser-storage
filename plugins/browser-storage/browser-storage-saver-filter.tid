@@ -2,4 +2,4 @@ created: 20220419183248949
 modified: 20220419183248949
 title: $:/plugins/btheado/BrowserStorage/SaveFilter
 
-[all[]] -[is[shadow]!is[tiddler]] -[prefix[$:/state/popup/]] -[prefix[$:/temp/]] -[prefix[$:/HistoryList]]
+[all[]] -[prefix[$:/state/popup/]] -[prefix[$:/temp/]] -[prefix[$:/HistoryList]]
