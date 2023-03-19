@@ -3,4 +3,6 @@ modified: 20230319150821620
 tags: 
 title: $:/plugins/btheado/BrowserStorage/StartupMessage
 
+<$navigator story="$:/StoryList">
 <$text text={{{[enlist{$:/temp/BrowserStorage/Log}count[]]}}}/> tiddlers loaded from local browser storage. Be sure to periodically [[backup|$:/plugins/btheado/BrowserStorage/backup]] your file.
+</$navigator>
