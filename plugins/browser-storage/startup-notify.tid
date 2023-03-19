@@ -1,0 +1,8 @@
+created: 20230319151028372
+modified: 20230319151854263
+tags: $:/tags/StartupAction/PostRender
+title: $:/plugins/btheado/BrowserStorage/startup/notify
+
+<$list filter="[enlist{$:/temp/BrowserStorage/Log}first[]]">
+<$action-sendmessage $message="tm-notify" $param="$:/plugins/btheado/BrowserStorage/StartupMessage"/>
+</$list>
