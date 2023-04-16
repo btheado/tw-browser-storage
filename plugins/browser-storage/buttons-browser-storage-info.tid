@@ -1,0 +1,9 @@
+tags: $:/tags/ViewToolbar
+title: $:/plugins/btheado/BrowserStorage/Buttons/browser-storage-info
+
+\whitespace trim
+<$list filter="[enlist{$:/temp/BrowserStorage/Log}match<currentTiddler>] [haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}match<currentTiddler>] :and[first[]]"> 
+<$button to="$:/plugins/btheado/BrowserStorage/backup" tooltip="this tiddler is stored in browser storage" aria-label="this tiddler is stored in browser storage" class=<<tv-config-toolbar-class>>>
+{{$:/images/boxicons/regular/bx-cylinder}}
+</$button>
+</$list>
