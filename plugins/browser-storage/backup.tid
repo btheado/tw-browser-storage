@@ -3,6 +3,14 @@ modified: 20220731013334922
 tags: 
 title: $:/plugins/btheado/BrowserStorage/backup
 
+\define download-storage-tiddlers-as-json()
+<$action-sendmessage
+  $message="tm-download-file"
+  $param="$:/core/templates/exporters/JsonFile"
+  exportFilter="[enlist{$:/temp/BrowserStorage/Log}] [haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}] -$:/config/BrowserStorage/Enabled"
+  filename={{{[[$:/config/SaveWikiButton/Filename]get[text]else[tiddlers]addsuffix[.json]]}}}/>
+\end
+
 Have you downloaded a backup file recently?
 
 Click this button {{$:/core/ui/Buttons/save-wiki}} to download a new backup copy of your wiki.
@@ -13,7 +21,7 @@ Here is a summary of the tiddlers in browser local storage:
 
 |!Loaded at startup|<$link to="$:/plugins/btheado/BrowserStorage/TiddlersLoadedFromBrowserStorage"><$text text={{{[enlist{$:/temp/BrowserStorage/Log}count[]]}}}/> tiddlers</$link>|
 |!Saved since startup|<$link to="$:/plugins/btheado/BrowserStorage/TiddlersChangedSinceStartup"><$text text={{{[haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}] -$:/config/BrowserStorage/Enabled :and[count[]]}}}/> tiddlers</$link>|
-|!Total (unique)|<$text text={{{[enlist{$:/temp/BrowserStorage/Log}] [haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}] -$:/config/BrowserStorage/Enabled :and[unique[]count[]]}}}/> tiddlers|
+|!Total (unique)|<$text text={{{[enlist{$:/temp/BrowserStorage/Log}] [haschanged[]subfilter{$:/config/BrowserStorage/SaveFilter}] -$:/config/BrowserStorage/Enabled :and[unique[]count[]]}}}/> tiddlers <$button tooltip="download browser storage tiddlers as json" aria-label="download browser storage tiddlers as json" actions=<<download-storage-tiddlers-as-json>> class=<<tv-config-toolbar-class>>> {{$:/core/images/export-button}} </$button>|
 
 The browser local storage tiddlers are not present in the source url: {{$:/info/url/full}}, but they will be saved whenever you download a backup copy {{$:/core/ui/Buttons/save-wiki}}.
 
