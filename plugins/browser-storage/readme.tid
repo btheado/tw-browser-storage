@@ -8,9 +8,3 @@ This plugin contains opinionated configuration settings for the [[browser-storag
 * [[Instructions|$:/plugins/btheado/BrowserStorage/backup]] on using the save button as a way to backup the wiki
 * [[Browse-able list|$:/plugins/btheado/BrowserStorage/TiddlerStorageCounts]] of tiddlers which were loaded from storage and those which were saved to storage after load
 * Displays a [[notification message|$:/plugins/btheado/BrowserStorage/StartupMessage]] at startup telling how many tiddlers were loaded from browser storage
-
-
-Contains browser storage improvements which have not been merged into master yet:
-
-* [[Prevent shadow tiddlers from being saved to local storage|https://github.com/Jermolene/TiddlyWiki5/pull/7365]]
-* [[Request permission to protect local storage from eviction|https://github.com/Jermolene/TiddlyWiki5/pull/7398]]
