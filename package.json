@@ -3,8 +3,7 @@
   "version": "0.0.1",
   "description": "tw5 plugin",
   "dependencies": {
-    "tiddlywiki": "^5.2.7",
-    "tiddlywiki-7364-fork": "github:btheado/TiddlyWiki5#7364-7369-browser-storage-improvements",
+    "tiddlywiki": "^5.3.0",
     "tiddlywiki-prerelease": "github:Jermolene/TiddlyWiki5"
   },
   "devDependencies": {
@@ -12,12 +11,9 @@
   },
   "scripts": {
     "build": "node ./node_modules/tiddlywiki/tiddlywiki.js . --build index",
-    "build-7364-fork": "node ./node_modules/tiddlywiki-7364-fork/tiddlywiki.js . --output ./output/prerelease/ --build index",
     "build-prerelease": "node ./node_modules/tiddlywiki-prerelease/tiddlywiki.js . --output ./output/prerelease/ --build index",
-    "build-beta": "node ./node_modules/tiddlywiki/tiddlywiki.js . --build beta",
     "update-tw": "npm install --save tiddlywiki-7364-fork@github:btheado/TiddlyWiki5#7364-7369-browser-storage-improvements && npm install --save tiddlywiki-prerelease@github:Jermolene/TiddlyWiki5 && npm install --save tiddlywiki",
     "dev": "npx nodemon -e tid,multids,js,info --watch plugins ./node_modules/tiddlywiki/tiddlywiki.js . --listen port=7111",
-    "dev-7364-fork": "npx nodemon -e tid,multids,js,info --watch plugins ./node_modules/tiddlywiki-7364-fork/tiddlywiki.js . --listen port=7111",
     "dev-prerelease": "npx nodemon -e tid,multids,js,info --watch plugins ./node_modules/tiddlywiki-prerelease/tiddlywiki.js . --listen port=7111"
   },
   "author": "Brian Theado",
